@@ -7,6 +7,7 @@ require('dotenv').config();
 
 const userController = require('./controllers/userController');
 const cookieController = require('./controllers/cookieController');
+const sessionController = require('./controllers/sessionController');
 
 const app = express();
 const PORT = process.env.PORT;
@@ -37,6 +38,7 @@ app.get('/',
 app.post('/signup', 
   userController.createUser,
   cookieController.setSSIDCookie,
+  sessionController.createSession,
   (req, res) => {
     return res.status(200).json(res.locals);
   }

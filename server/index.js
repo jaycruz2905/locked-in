@@ -15,7 +15,7 @@ const MONGO_URI = 'mongodb+srv://jerelmcruz0:pkDZ4vcPsGvkj4E5@locked-in.kcuuvmx.
 mongoose.connect(MONGO_URI, {
     dbName: 'Reinforcement',
   })
-    .then(() => console.log('----> Connected to Mongo DB.'))
+    .then(() => console.log('-----> Connected to Mongo DB.'))
     .catch(err => console.log(err));
 
     

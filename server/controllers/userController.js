@@ -6,7 +6,7 @@ const userController = {};
 
 userController.createUser = async (req, res, next) => {
   try {
-    console.log('----> userController.createUser START');
+    console.log('-----> userController.createUser START');
     const { username, password } = req.body;
 
     if (!password || !username) {
@@ -27,7 +27,7 @@ userController.createUser = async (req, res, next) => {
     //if no user found, create
     await User.create({ username: username, password: password});
     console.log(`---> User successfully created! Username: ${username} Password: ${password}`);
-    console.log('----> userController.createUser END');
+    console.log('-----> userController.createUser END');
     return next();
   }
   catch (error) {
